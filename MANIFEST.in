@@ -1,1 +1,5 @@
-include README.rst LICENSE CHANGELOG.rst
+include README.rst LICENCE CHANGELOG.rst pyproject.toml
+recursive-include model *.ecore *.md
+recursive-include generator *.py
+recursive-include tests *.py *.uml
+recursive-include pyuml2 *.skeleton

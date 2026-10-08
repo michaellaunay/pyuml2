@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<uml:Package xmlns:xmi="http://www.omg.org/XMI" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Corpus" xmi:version="2.0">
+  <packagedElement xsi:type="uml:Class" name="Base"/>
+  <packagedElement xsi:type="uml:Class" name="Child">
+    <generalization xsi:type="uml:Generalization" general="#//Base"/>
+    <ownedAttribute xsi:type="uml:Property" name="reference" type="#//Base"/>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Association" name="link" memberEnd="#//link/base #//link/child">
+    <ownedEnd xsi:type="uml:Property" name="base" type="#//Base" association="#//link"/>
+    <ownedEnd xsi:type="uml:Property" name="child" type="#//Child" association="#//link"/>
+  </packagedElement>
+  <packagedElement xsi:type="uml:Profile" name="ExampleProfile">
+    <packagedElement xsi:type="uml:Stereotype" name="ExampleStereotype"/>
+  </packagedElement>
+</uml:Package>

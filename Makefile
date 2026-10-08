@@ -1,8 +1,6 @@
-METAMODEL_DIRECTORY := 'pyuml2'
+PYTHON ?= python
+OUTPUT ?= build/generated
 
+.PHONY: all
 all:
-	mkdir -p $(METAMODEL_DIRECTORY)
-	rm -rf $(METAMODEL_DIRECTORY)/types
-	python -m pyecoregen.cli -e model/types.ecore -o .
-	mv types $(METAMODEL_DIRECTORY)/
-	python generator/uml_generator.py
+	$(PYTHON) -m pyuml2.generation --output "$(OUTPUT)"
